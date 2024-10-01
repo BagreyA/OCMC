@@ -1,15 +1,16 @@
-import numpy as np 
+import numpy as np  
 import matplotlib.pyplot as plt
 
-P_tx_UL = 24  # мощность передатчика UE, дБм
-P_tx_DL = 46  # мощность передатчика BS, дБм
-I_noise_UL = 6  # уровень шума для UE, дБ
-I_noise_DL = 2.4  # уровень шума для BS, дБ
-SINR_UL = 4  # требуемое SINR для UL, дБ
-SINR_DL = 2  # требуемое SINR для DL, дБ
-MAPL_UL = 126.7 
-MAPL_DL = 144.1  
+P_tx_UL = 24
+P_tx_DL = 46
+I_noise_UL = 6
+I_noise_DL = 2.4
+SINR_UL = 4
+SINR_DL = 2
+MAPL_UL = 126.7
+MAPL_DL = 144.1
 
+# Расстояния от 0.01 до 100 км
 distance_km = np.linspace(0.01, 100, 1000)
 
 # Функция для модели COST 231 Hata для плотной городской застройки
@@ -22,7 +23,7 @@ def PL_cost231_hata_dense_urban(distance_km, f_MHz=1800, h_BS=50, h_MS=3):
                   44.9 - 6.55 * np.log10(f_MHz),
                   (47.88 + 13.9 * np.log10(f_MHz) - 13.9 * np.log10(h_BS)) * (1 / np.log10(50)))
 
-    L_clutter = 0  # Затухание сигнала из-за препятствий (например, здания)
+    L_clutter = 3  # Затухание сигнала из-за препятствий (например, здания)
     PL = A + B * np.log10(f_MHz) - 13.82 * np.log10(h_BS) - a_hms + s * np.log10(distance_km) + L_clutter
     return PL
 
@@ -97,7 +98,14 @@ number_bs_total_micro = area_business_centers / area_per_bs_micro if area_per_bs
 # Площадь для ячеек
 number_of_sectors = 3  # 3 сектора для всех сот
 cell_area_macro = area_per_bs_macro / number_of_sectors if area_per_bs_macro > 0 else 0
-cell_area_micro = area_per_bs_micro/ number_of_sectors if area_per_bs_macro > 0 else 0
+cell_area_micro = area_per_bs_micro / number_of_sectors if area_per_bs_macro > 0 else 0
+
+# Площадь и количество фемтосот
+radius_femto = 0.5  # Радиус фемтосоты в км
+area_per_femto = 1.95 * (radius_femto ** 2)  # Площадь одной фемтосоты
+number_bs_femto = area_business_centers / area_per_femto  # Количество фемтосот для покрытия 4 кв.км
+
+area_per_bs_femto = area_business_centers / area_per_femto if area_per_bs_macro > 0 else np.inf
 
 # Формирование таблицы результатов
 results = [
@@ -107,7 +115,10 @@ results = [
     ['Необходимые БС (4 кв.км, макро)', f'{np.ceil(number_bs_business_centers_macro):.0f}'],
     ['Площадь одной соты (кв.км, микро)', f'{cell_area_micro:.2f}'],
     ['Площадь одной БС (кв.км, микро)', f'{area_per_bs_micro:.2f}'],
-    ['Необходимые БС (4 кв.км, микро)', f'{np.ceil(number_bs_total_micro):.0f}']
+    ['Необходимые БС (4 кв.км, микро)', f'{np.ceil(number_bs_total_micro):.0f}'],
+    ['Площадь одной соты (кв.км, фемто)', f'{area_per_femto:.2f}'],
+    ['Площадь одной БС (кв.км, фемто)', f'{area_per_bs_femto:.2f}'],
+    ['Необходимые БС(4 кв.км, фемто)', f'{np.ceil(number_bs_femto):.0f}']
 ]
 
 # Отображение таблицы результатов
@@ -118,12 +129,10 @@ table.scale(1, 1)
 
 # Настройки графика
 plt.title('Зависимость потерь радиосигнала от расстояния (COST 231 Hata и UMiNLOS)')
-plt.xlabel('Расстояние (км), L_clutter = 0')
+plt.xlabel('Расстояние (км), L_clutter = 3')
 plt.ylabel('Потери (дБ)')
 plt.grid(True)
 plt.legend()
 plt.xlim(0, 20)
-plt.ylim(0, 
-plt.xlim(0, 10)
 plt.ylim(0, 250)
 plt.show()
