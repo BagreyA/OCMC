@@ -12,3 +12,39 @@
   10. Выполнить прямое дискретное преобразование Фурье для оригинального звучания и для прореженного сигнала, вывести на график амплитудный спектр сигнала, определитеь его ширину.
   11. Оценить влияние разрядности АЦП на спектр сигнала. Для результирующего дискретного сигнала требуется выполнить прямое преобразование Фурье. Сравнить полученный спектр со спектром исходной синусоиды, отсчеты которой не подвергались квантованию по уровню. Вывести среднюю ошибку квантования для случаев, когда разрядность АЦП равна 3/4/5/6.
   12. Составьте отчет.
+
+## Поллученые данные
+1. График с колебаниями непрерывного сигнала:
+![image](https://github.com/user-attachments/assets/f58a9c05-b09a-446a-b8ae-8b2cf59fb114)
+
+2. График max спектра сигнала:
+![image](https://github.com/user-attachments/assets/b2e6cad6-1787-445f-9261-2a92c682e4f1)
+
+3. Оцивровка сигнала:
+![image](https://github.com/user-attachments/assets/cc966a17-ef4f-423b-b1a9-85e6c0e31810)
+
+4. Прямое дискретное преобразование Фурье:
+![image](https://github.com/user-attachments/assets/24408dd1-c277-41f2-bcc7-12f0c75459e5)
+
+5. Сравнение оригинального и востановленного сигнала:
+![image](https://github.com/user-attachments/assets/f3f71b4d-b9d9-4fec-8dda-d64edc72d209)
+
+6. Увеличение частоту дискретизации в 4 раза:
+![image](https://github.com/user-attachments/assets/a2b8002a-721c-417a-adc6-758548885098)
+![image](https://github.com/user-attachments/assets/3ba5c2d1-4520-4c2f-9177-66c822a6c33f)
+![image](https://github.com/user-attachments/assets/32c1c285-0572-437c-b702-94d83f3f41c7)
+
+7. Записали свой голос и проанализировали его:
+![image](https://github.com/user-attachments/assets/0303873e-5fc7-4d54-bbf6-91706487d652)
+![image](https://github.com/user-attachments/assets/dcca420b-ec88-425e-8215-9848a95b0465)
+
+8. Прореженный сигнал:
+![image](https://github.com/user-attachments/assets/ab662686-3a1c-4754-b94a-bfd1385cf00d)
+
+9. Амплитудный спектр оригинального и прореженного сигнала:
+![image](https://github.com/user-attachments/assets/89efb404-fc81-4158-89af-494a58c11bd2)
+![image](https://github.com/user-attachments/assets/3edd9d72-be84-4762-8270-3fcfd4b7bcaa)
+
+10. Сравнение амплитудных спектров:
+![image](https://github.com/user-attachments/assets/19cc8a1d-a1c6-47a4-bfe2-cfe48b07580a)
+![image](https://github.com/user-attachments/assets/c983a1a0-9654-495b-b7fe-9c2e5505e812)
