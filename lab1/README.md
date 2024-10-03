@@ -15,36 +15,46 @@
 
 ## Поллученые данные
 1. График с колебаниями непрерывного сигнала:
+
 ![image](https://github.com/user-attachments/assets/f58a9c05-b09a-446a-b8ae-8b2cf59fb114)
 
 2. График max спектра сигнала:
+
 ![image](https://github.com/user-attachments/assets/b2e6cad6-1787-445f-9261-2a92c682e4f1)
 
-4. Оцивровка сигнала:
+3. Оцивровка сигнала:
+
 ![image](https://github.com/user-attachments/assets/cc966a17-ef4f-423b-b1a9-85e6c0e31810)
 
-5. Прямое дискретное преобразование Фурье:
+4. Прямое дискретное преобразование Фурье:
+
 ![image](https://github.com/user-attachments/assets/24408dd1-c277-41f2-bcc7-12f0c75459e5)
 
-6. Сравнение оригинального и востановленного сигнала:
+5. Сравнение оригинального и востановленного сигнала:
+
 ![image](https://github.com/user-attachments/assets/f3f71b4d-b9d9-4fec-8dda-d64edc72d209)
 
-7. Увеличение частоту дискретизации в 4 раза:
+6. Увеличение частоту дискретизации в 4 раза:
+
 ![image](https://github.com/user-attachments/assets/a2b8002a-721c-417a-adc6-758548885098)
 ![image](https://github.com/user-attachments/assets/da7f0bf3-9d1f-4556-8824-334c3f8bc0c4)
 ![image](https://github.com/user-attachments/assets/32c1c285-0572-437c-b702-94d83f3f41c7)
 
-8. Записали свой голос и проанализировали его:
+7. Записали свой голос и проанализировали его:
+
 ![image](https://github.com/user-attachments/assets/0303873e-5fc7-4d54-bbf6-91706487d652)
 ![image](https://github.com/user-attachments/assets/dcca420b-ec88-425e-8215-9848a95b0465)
 
-9. Прореженный сигнал:
+8. Прореженный сигнал:
+
 ![image](https://github.com/user-attachments/assets/ab662686-3a1c-4754-b94a-bfd1385cf00d)
 
-10. Амплитудный спектр оригинального и прореженного сигнала:
+9. Амплитудный спектр оригинального и прореженного сигнала:
+    
 ![image](https://github.com/user-attachments/assets/89efb404-fc81-4158-89af-494a58c11bd2)
 ![image](https://github.com/user-attachments/assets/3edd9d72-be84-4762-8270-3fcfd4b7bcaa)
 
-11. Сравнение амплитудных спектров:
+10. Сравнение амплитудных спектров:
+
 ![image](https://github.com/user-attachments/assets/19cc8a1d-a1c6-47a4-bfe2-cfe48b07580a)
 ![image](https://github.com/user-attachments/assets/c983a1a0-9654-495b-b7fe-9c2e5505e812)
