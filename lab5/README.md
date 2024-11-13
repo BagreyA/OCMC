@@ -17,6 +17,6 @@
 
 5) Сделать цикл из 250+CRC length итераций и в этом цикле по очереди исказить по одному биту – с 0-го до 250+CRC-1, проверить в соответствии с п.3 обнаружена ли ошибка на приемной стороне и выполните подсчет того сколько раз за этот цикл приемник обнаружил и не обнаружил ошибки. Результат вывести в окно терминала.
 
-6) ![image](https://github.com/user-attachments/assets/fcc0de39-0d04-428e-b9bc-ddf60c8aeb13)
-7) ![image](https://github.com/user-attachments/assets/aad5802d-cf9d-40c1-9151-0ee65acda0fc)
+![image](https://github.com/user-attachments/assets/fcc0de39-0d04-428e-b9bc-ddf60c8aeb13)
+![image](https://github.com/user-attachments/assets/aad5802d-cf9d-40c1-9151-0ee65acda0fc)
 
